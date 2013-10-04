@@ -1,13 +1,10 @@
 def move_n_chickens(n, t1, t2, temp): 
 	if n == 1: 
 		t2.append(t1.pop())
-		#t2.extend(t1)
-		#t1.pop()
 		return t2
 	move_n_chickens(n - 1, t1, temp, t2)
 	t2.append(t1.pop())
 	move_n_chickens(n - 1, temp, t2, t1)
-	#t1.pop()
 
 
 
